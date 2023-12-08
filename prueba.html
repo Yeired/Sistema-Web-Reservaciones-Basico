@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar PDF con JavaScript</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<button onclick="generarPDF()">Generar PDF</button>
+
+<script>
+function generarPDF() {
+    // Datos simulados para la prueba, reemplaza con tus datos reales
+    var nombre = "John Doe";
+    var reservaciones = [
+        { ficha: "001", fecha: "2023-01-01", hora: "12:00 PM" },
+        { ficha: "002", fecha: "2023-02-01", hora: "01:30 PM" },
+        // Agrega más datos según sea necesario
+    ];
+
+    // Crear un nuevo objeto jsPDF
+    const pdf = new jspdf.jsPDF();
+
+    // Agregar contenido al PDF
+    var img = new Image();
+    img.src = 'img/logo_foodweb.png';
+
+    img.onload = function() {
+        pdf.addImage(img, 'PNG', 5, 5, 35);
+        
+        pdf.setFont('Courier','B', 15);
+        pdf.text(40, 15, 'FOODWEB');
+    
+        pdf.setFont('Courier', '', 10);
+        pdf.text(40, 25, 'Miguel Coatlinchan');
+        pdf.text(40, 30, '56250 Texcoco, Mex');
+        pdf.text(40, 35, '595 921 3027');
+        pdf.text(40, 40, 'www.FOODWEB.COM');
+    
+        pdf.text(10, 50, '---------------------------------');
+        pdf.text(10, 60, 'TITULAR:');
+        pdf.text(10, 65, nombre);
+        pdf.text(10, 75, 'FECHA Y HORA:');
+        pdf.text(10, 80, new Date().toLocaleString());
+    
+        pdf.text(10, 95, '---------------------------------');
+        pdf.text(10, 105, 'INFORMACION DE LA RESERVACION');
+    
+        var header = ['FICHA', 'FECHA', 'HORA'];
+    
+        pdf.text(10, 115, header.join('    '));
+    
+        for (var i = 0; i < reservaciones.length; i++) {
+            var row = reservaciones[i];
+            pdf.text(10, 125 + i * 10, Object.values(row).join('    '));
+        }
+    
+        pdf.text(10, 135 + reservaciones.length * 10, '---------------------------------');
+    
+        // Guardar el PDF
+        pdf.save("documento.pdf");
+    };
+}
+</script>
+
+</body>
+</html>
