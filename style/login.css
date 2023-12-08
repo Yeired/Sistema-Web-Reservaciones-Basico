@@ -1,0 +1,101 @@
+/*------------------------------LOGIN-----------------------*/
+
+.mainlog{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 70%;
+}
+.login-box {
+    transition: all .2s ease-in-out;
+    width: 400px;
+    padding: 40px;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+.login-box:hover{
+    scale: 1.1;
+}
+
+.login-box h2 {
+    letter-spacing: 3px;
+    margin: 0 0 30px;
+    font-size: 30px;    
+    padding: 0;
+    color: #fff;
+    transition: all .2s ease-in-out;
+    text-align: center;
+  }
+
+.login-box:hover h2 {
+    color: orange;
+}
+  
+.login-box .user-box {
+    position: relative;
+  }
+
+  
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border: none;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+.login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 20px;
+    color: #fff;
+    pointer-events: none;
+    transition: all .2s ease-in-out;
+  }
+  
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: orange;
+    font-size: 12px;
+  }
+  
+.ingresar {
+    display: flex;
+    justify-content: center;
+    position: center;
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+    margin-top: 40px;
+
+  }
+  
+.ingresar:hover {
+    scale: 1.15;
+  }
+.ingresar:active{
+    scale: 0.95;
+}
+.registrar-box .info-box.link{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 25px;
+  margin-bottom: 30px;
+  color: orange;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+

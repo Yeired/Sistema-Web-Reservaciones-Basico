@@ -1,0 +1,189 @@
+.maintablas{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+}
+.tabla-box {
+    transition: all .2s ease-in-out;
+    width: 100%;
+    padding: 25px;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+.tabla-box:hover{
+    scale: 1.02;
+}
+input[type="date"]::-webkit-calendar-picker-indicator, input[type="time"]::-webkit-calendar-picker-indicator{
+  border-radius: 4px;
+  margin-right: 2px;
+  opacity: 0.9;
+  filter: invert(1);
+}
+.tabla-box h2 {
+  letter-spacing: 3px;
+    margin: 0 0 30px;
+    font-size: 30px;   
+    transition: all .2s ease-in-out; 
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.tabla-box:hover h2{
+    color: orange;
+}
+  
+.tabla-box .info-box {
+    position: relative;
+    height: 100%;
+    scale: 1.1;
+    justify-content: space-between;
+    
+  }
+
+  
+.tabla-box .info-box.informacion input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+.tabla-box .info-box.informacion label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 20px;
+    color: #fff;
+    pointer-events: none;
+    transition: all .2s ease-in-out;
+  }
+  
+.tabla-box .info-box.informacion input:focus ~ label,
+.tabla-box .info-box.informacion input:valid ~ label {
+    top: -25px;
+    left: 0;
+    color: orange;
+    font-size: 15px;
+  }
+  
+
+.botonRegistrar {
+    text-align:center;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+
+  }
+  
+.botonRegistrar:hover {
+    scale: 1.15;
+    color: white;
+  }
+.botonRegistrar:active{
+    scale: 0.95;
+    color: white;
+}
+
+.botonEmpleado {
+  padding: 15px;
+  text-align:center;
+  background-color: orange;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  
+  transition: all .2s ease-in-out;
+
+}
+
+.botonEmpleado:hover {
+  scale: 1.15;
+  color: white;
+}
+.botonEmpleado:active{
+  scale: 0.95;
+  color: white;
+}
+
+
+.tabla-box .info-box.radio{
+    width: 10%;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+
+.tabla-box .info-box.radio label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 20px;
+    color: #fff;
+    pointer-events: none;
+    transition: all .2s ease-in-out;
+  }
+
+.tabla-box .info-box.radio input:focus ~ label,
+.tabla-box .info-box.radio input:valid ~ label {
+    top: -25px;
+    left: 0;
+    color: orange;
+    font-size: 15px;
+  }
+td .botonRegistrar {
+    padding: 5px;
+    display: inline-block; 
+    margin: 1px;
+    font-size: 20px;
+}
+.tabla-box .table2{
+  position: absolute;
+  left: 50%;
+  margin-left: -300px;
+  top: 50%;
+  margin-top: -300px;
+}
+table {
+  
+    padding: 15px;
+    border-collapse: separate;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+    margin: 10px;
+}
+th{
+    font-style: normal;
+    transition: all .2s ease-in-out;
+    letter-spacing: 3px;
+    font-size: 20px;
+    color: #fff;
+}
+.tabla-box:hover th{
+    color: orange;
+}
+.tabla-box:hover table{
+    border: 8px solid orange;
+    border-radius: 25px;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+
